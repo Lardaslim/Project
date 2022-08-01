@@ -1,8 +1,6 @@
-import java.util.Arrays;
-
 //import java.util.List;
 //import java.util.Scanner;
-public class Open {
+public class B2String {
     public static void main(String[] args) {
         getCardId(50);
 

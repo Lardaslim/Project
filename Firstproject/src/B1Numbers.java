@@ -1,4 +1,4 @@
-public class Numbers {
+public class B1Numbers {
 
     public static void main(String[] args) throws Exception {
         System.out.println(roundToPowerOfTen(1678.0, 3.0));
@@ -115,15 +115,14 @@ public class Numbers {
      *           (0,1) (1,2) => 0
      */
     public static Double getAngleBetweenVectors(Integer x1, Integer y1, Integer x2, Integer y2) {
-        Double absA =  Math.abs((Math.sqrt(Math.pow(x1, 2) + Math.pow(x2, 2))));
-        Double absB =  Math.abs((Math.sqrt(Math.pow(y1, 2) + Math.pow(y2, 2))));
+        Double absA = Math.abs((Math.sqrt(Math.pow(x1, 2) + Math.pow(x2, 2))));
+        Double absB = Math.abs((Math.sqrt(Math.pow(y1, 2) + Math.pow(y2, 2))));
         Double angle = Math.acos(
-            ((x1 * x2) + (y1 * y2)) / (absA * absB)
-        );
+                ((x1 * x2) + (y1 * y2)) / (absA * absB));
         return angle;
     }
     // System.out.println(getAngleBetweenVectors(1, 0, 0, 1));
-    //??? где-то косяк: решает верно только первое условие!!!
+    // ??? где-то косяк: решает верно только первое условие!!!
 
     /**
      * Returns a number by given string representation.
@@ -136,12 +135,11 @@ public class Numbers {
      *           '37' => 37
      *           '-525.5' => -525.5
      */
-    // public static Double parseNumberFromString(String value) {
-    //     double num = Double.parseDouble(value);
-    //      return num;
-    // }
+    public static Double parseNumberFromString(String value) {
+        double num = Double.parseDouble(value);
+        return num;
+    }
     // System.out.println(parseNumberFromString("100"));
-
 
     /**
      * Returns a diagonal length of the rectangular parallelepiped given by its
@@ -163,7 +161,6 @@ public class Numbers {
     }
     // System.out.println(getParallelipidedDiagonal(1, 1, 1));
 
-
     /**
      * Returns the number rounded to specified power of 10.
      *
@@ -182,9 +179,9 @@ public class Numbers {
      *           1678, 3 => 2000
      */
     public static Double roundToPowerOfTen(Double num, Double pow) {
-        
+
         return Math.round(num / Math.pow(10, pow)) * Math.pow(10, pow);
-    }          
+    }
     // System.out.println(roundToPowerOfTen(1234.0, 0.0));
 
 }
