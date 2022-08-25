@@ -4,7 +4,7 @@ import java.util.Map;
 public class B3Loops {
 
     public static void main(String[] args) throws Exception {
-
+        getDigitalRoot(12345);
     }
 
     /**
@@ -29,8 +29,17 @@ public class B3Loops {
      *
      */
     public static String getFizzBuzz(Integer num) {
-        return "";
-    }
+        if (num % 3 == 0 && num % 5 == 0) {
+            System.out.println("FizzBuzz");
+        } else if (num % 3 == 0 && num % 5 != 0) {
+            System.out.println("Fizz");
+        } else if (num % 3 != 0 && num % 5 == 0) {
+            System.out.println("Buzz");
+        } else if (num % 3 != 0 && num % 5 != 0) {
+            System.out.println(num);
+        }
+        return null;
+    } // getFizzBuzz(15);
 
     /**
      * Returns the factorial of the specified integer n.
@@ -44,7 +53,16 @@ public class B3Loops {
      *           10 => 3628800
      */
     public static Integer getFactorial(Integer num) {
+        int n = 1;
+        for (int i = 1; i <= num; i++) {
+
+            n *= i;
+            if (i == num) {
+                System.out.println(n);
+            }
+        }
         return num;
+        // getFactorial(5);
     }
 
     /**
@@ -60,7 +78,27 @@ public class B3Loops {
      *           -1,1 => 0 ( = -1 + 0 + 1 )
      */
     public static Integer getSumBetweenNumbers(Integer num1, Integer num2) {
+        int n3 = 0;
+        for (int i = num1; i <= num2; i++) {
+            n3 += i;
+            if (i == num2) {
+                System.out.print(n3 + " ( = ");
+                for (int i2 = num1; i2 <= num2; i2++) {
+                    System.out.print(i2);
+                    if (i2 < num2) {
+                        if (num1 < 0) {
+                            System.out.print(" + ");
+                        } else {
+                            System.out.print("+");
+                        }
+                    } else {
+                        System.out.print(" )");
+                    }
+                }
+            }
+        }
         return 0;
+        // getSumBetweenNumbers(5, 10);
     }
 
     /**
@@ -79,7 +117,10 @@ public class B3Loops {
      *           10,10,10 => true
      */
     public static Boolean isTriangle(Integer a, Integer b, Integer c) {
+        System.out.println(a < (b + c) && b < (a + c) && c < (a + b) ? "true" : "false");
         return false;
+        // isTriangle(1, 2, 3);
+
     }
 
     /**
@@ -205,7 +246,11 @@ public class B3Loops {
      *           'noon' => 'noon'
      */
     public static String reverseString(String str) {
+        for (int i = str.length() - 1; i >= 0; i--) {
+            System.out.print(str.charAt(i));
+        }
         return "";
+        // reverseString("rotator");
     }
 
     /**
@@ -221,7 +266,11 @@ public class B3Loops {
      *           34143 => 34143
      */
     public static Integer reverseInteger(Integer num) {
+        for (int i = (num.toString()).length() - 1; i >= 0; i--) {
+            System.out.print((num.toString()).charAt(i));
+        }
         return 0;
+        // reverseInteger(12345);
     }
 
     /**
