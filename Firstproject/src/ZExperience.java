@@ -1,19 +1,13 @@
-import java.util.ArrayList;
+public class ZExperience {
 
-import javax.swing.JFrame;
+    public static void main(String args[]) throws Exception {
 
-class ZExperience {
-    public static void main(String[] args) {
-        // ArrayList<Integer> numbers = new ArrayList<>(2);
-        // numbers.add(5);
-        // numbers.add(50);
+        String[] mass1 = { "A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K" };
+        String[] mass2 = { "♣креста", "♦бубна", "♥чирва", "♠пика" };
+        String[] cards = new String[mass1.length * mass2.length];
+        for (int i = 0; i < mass2.length; i++) {
 
-        // // for (Integer el : numbers);
-        // System.out.println(numbers);
-        JFrame frame = new JFrame("test");
-        frame.setDefaultCloseOperation(frame.EXIT_ON_CLOSE);
-        frame.setSize(500, 500);
-        frame.setLocation(850, 200);
-        frame.setVisible(true);
+        }
+        System.out.println(cards[3]);
     }
 }
