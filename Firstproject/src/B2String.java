@@ -293,5 +293,5 @@ public class B2String {
             }
         }
     }
-
+    // getCardId("K♠");
 }
