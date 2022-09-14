@@ -150,7 +150,7 @@ public class B3Loops {
      * @return {bool}
      *
      * @example:
-     *           { top: 0, left: 0, width: 10, height: 10 },
+     *           { top : 0, left: 0, width: 10, height: 10 },
      *           { top: 5, left: 5, width: 20, height: 20 } => true
      * 
      *           { top: 0, left: 0, width: 10, height: 10 },

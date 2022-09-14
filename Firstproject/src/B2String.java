@@ -2,7 +2,7 @@
 //import java.util.Scanner;
 public class B2String {
     public static void main(String[] args) {
-        getCardId("5peak");
+        getCardId("K♠");
 
     }
 
@@ -279,13 +279,13 @@ public class B2String {
      */
     public static void getCardId(String k) {
         String[] mass1 = { "A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K" };
-        String[] mass2 = { "cross", "tambourine", "chirva", "peak" };
+        String[] mass2 = { "♣", "♦", "♥", "♠" };
         String[] cards = new String[mass1.length * mass2.length];
         Integer number = 0;
         for (int i = 0; i < mass2.length; i++) {
             for (int j = 0; j < mass1.length; j++) {
                 cards[number] = mass1[j] + mass2[i];
-                if (cards[number] == k) {
+                if (cards[number].contains(k)) {
                     System.out.println(number);
                 }
                 number++;
