@@ -3,6 +3,8 @@ import java.util.List;
 import java.util.HashMap;
 import java.util.Map;
 
+import netscape.javascript.JSObject;
+
 public class ZExperience {
 
     public static void main(String args[]) throws Exception {
@@ -58,9 +60,31 @@ public class ZExperience {
                 name.put(i, name2);
             }
         }
-        System.out.println(name.get(9));
-        System.out.println(name.keySet());
+        // System.out.println(name.get(9));
+        // System.out.println(name.keySet());
         // System.out.println(name.values());
+
+        Map<Integer, User> newConstructor = new HashMap<Integer, User>();
+        for (Integer i = 0; i <= 5; i++) {
+            newConstructor.put(i, new User("testName " + i, "123" + i));
+
+        }
+
+        for (Integer keyItem : new ArrayList<Integer>(newConstructor.keySet())) {
+            System.out.println(keyItem + " : " + newConstructor.get(keyItem).GetData());
+        }
+
+        List<Integer> cifs = new ArrayList<Integer>();
+        cifs.add(1);
+        cifs.add(2);
+        cifs.add(3);
+        for (Integer cif : cifs) {
+            System.out.println(cif);
+        }
+        // System.out.println(newConstructor.get(1).UserName + " : " +
+        // newConstructor.get(1).password);
+        // System.out.println(newConstructor.get(1).GetData());
+
     }
 
 }
